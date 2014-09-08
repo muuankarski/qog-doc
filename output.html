@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Author Name" />
+  <title>Example of a simple convertible documentation with Markdown &amp; Pandoc</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="markdown.css" type="text/css" />
+</head>
+<body>
+<div id="header">
+<h1 class="title">Example of a simple convertible documentation with Markdown &amp; Pandoc</h1>
+<h2 class="author">Author Name</h2>
+<h3 class="date">September 8, 2014</h3>
+</div>
+<div id="TOC">
+<ul>
+<li><a href="#introduction"><span class="toc-section-number">1</span> Introduction</a></li>
+<li><a href="#lists"><span class="toc-section-number">2</span> Lists</a></li>
+<li><a href="#images"><span class="toc-section-number">3</span> Images</a></li>
+<li><a href="#tables"><span class="toc-section-number">4</span> Tables</a><ul>
+<li><a href="#simple-tables"><span class="toc-section-number">4.1</span> Simple tables</a></li>
+<li><a href="#multiline-tables"><span class="toc-section-number">4.2</span> Multiline tables</a></li>
+<li><a href="#raw-tex"><span class="toc-section-number">4.3</span> Raw TeX</a></li>
+</ul></li>
+<li><a href="#footnotes"><span class="toc-section-number">5</span> Footnotes</a></li>
+</ul>
+</div>
+<h1 id="introduction"><span class="header-section-number">1</span> Introduction</h1>
+<p>Content of this doc is copy-pasted from from <a href="http://rmarkdown.rstudio.com/authoring_pandoc_markdown.html">Pandoc Markdown</a>-documentation by Rstudio, which is basicly a reproduction of most of the pandoc markdown documentation on the Pandoc website, and is © 2006-2013 John MacFarlane (jgm at berkeley dot edu), released under the GPL, version 2 or greater.</p>
+<p>Pandoc understands an extended and slightly revised version of John Gruber’s original markdown syntax. This document explains the syntax, noting differences from standard markdown.</p>
+<h1 id="lists"><span class="header-section-number">2</span> Lists</h1>
+<ul>
+<li>fruits
+<ul>
+<li>apples
+<ul>
+<li>macintosh</li>
+<li>red delicious</li>
+</ul></li>
+<li>pears</li>
+<li>peaches</li>
+</ul></li>
+<li>vegetables
+<ul>
+<li>broccoli</li>
+<li>chard</li>
+</ul></li>
+</ul>
+<h1 id="images"><span class="header-section-number">3</span> Images</h1>
+<div class="figure">
+<img src="http://www.qog.pol.gu.se/digitalAssets/1349/1349208_qogeng_webheader.png" alt="Caption is placed here" /><p class="caption">Caption is placed here</p>
+</div>
+<div class="figure">
+<img src="Independence_of_Brazil_1888.jpg" alt="Picture of the day in Wikimedia Commons See" /><p class="caption">Picture of the day in Wikimedia Commons <a href="http://commons.wikimedia.org/wiki/Main_Page">See</a></p>
+</div>
+<h1 id="tables"><span class="header-section-number">4</span> Tables</h1>
+<h2 id="simple-tables"><span class="header-section-number">4.1</span> Simple tables</h2>
+<p>Four kinds of tables may be used. The first three kinds presuppose the use of a fixed-width font, such as Courier. The fourth kind can be used with proportionally spaced fonts, as it does not require lining up columns. Simple tables</p>
+<table>
+<caption>Demonstration of simple table syntax.</caption>
+<thead>
+<tr class="header">
+<th align="right">Right</th>
+<th align="left">Left</th>
+<th align="center">Center</th>
+<th align="left">Default</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">12</td>
+<td align="left">12</td>
+<td align="center">12</td>
+<td align="left">12</td>
+</tr>
+<tr class="even">
+<td align="right">123</td>
+<td align="left">123</td>
+<td align="center">123</td>
+<td align="left">123</td>
+</tr>
+<tr class="odd">
+<td align="right">1</td>
+<td align="left">1</td>
+<td align="center">1</td>
+<td align="left">1</td>
+</tr>
+</tbody>
+</table>
+<h2 id="multiline-tables"><span class="header-section-number">4.2</span> Multiline tables</h2>
+<table>
+<caption>Here’s the caption. It, too, may span multiple lines.</caption>
+<colgroup>
+<col width="16%" />
+<col width="11%" />
+<col width="22%" />
+<col width="34%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Centered Header</th>
+<th align="left">Default Aligned</th>
+<th align="right">Right Aligned</th>
+<th align="left">Left Aligned</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">First</td>
+<td align="left">row</td>
+<td align="right">12.0</td>
+<td align="left">Example of a row that spans multiple lines.</td>
+</tr>
+<tr class="even">
+<td align="center">Second</td>
+<td align="left">row</td>
+<td align="right">5.0</td>
+<td align="left">Here’s another one. Note the blank line between rows.</td>
+</tr>
+</tbody>
+</table>
+<p>This is an <a href="/url">inline link</a>, and here’s <a href="http://fsf.org" title="click here for a good time!">one with a title</a>.</p>
+<h2 id="raw-tex"><span class="header-section-number">4.3</span> Raw TeX</h2>
+
+<h1 id="footnotes"><span class="header-section-number">5</span> Footnotes</h1>
+<p>Here is a footnote reference,<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a> and another.<a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a></p>
+<p>This paragraph won’t be part of the note, because it isn’t indented.</p>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Here is the footnote.<a href="#fnref1">↩</a></p></li>
+<li id="fn2"><p>Here’s one with multiple blocks.</p>
+<p>Subsequent paragraphs are indented to show that they belong to the previous footnote.</p>
+<pre><code>{ some.code }</code></pre>
+<p>The whole paragraph can be indented, or just the first line. In this way, multi-paragraph footnotes work like multi-paragraph list items.<a href="#fnref2">↩</a></p></li>
+</ol>
+</div>
+</body>
+</html>
